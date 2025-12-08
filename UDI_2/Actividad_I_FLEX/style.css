@@ -1,5 +1,94 @@
 *{
-    
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: rgb(3, 118, 178);
+    text-decoration: none;
+} 
+
+.menu{
+    display: flex;
+    gap: 1rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+}
+
+.hero img{
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-hero{
+     position: absolute;
+  bottom: 140px;           /* Ajusta la posición vertical */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;           /* Cambia según necesites */
+  background: rgba(0, 0, 0, 0.5);  /* Fondo semitransparente opcional */
+  padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.hero button {
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.welcome-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.welcome-images img{
+     width: 200px !important;
+    height: 200px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 h2 {
