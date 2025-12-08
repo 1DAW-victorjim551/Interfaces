@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -45,7 +46,7 @@ body{
 
 .contenido-hero{
      position: absolute;
-  bottom: 140px;           /* Ajusta la posición vertical */
+  bottom: 10%;           /* Ajusta la posición vertical */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -70,28 +71,111 @@ body{
 }
 
 .welcome {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.welcome {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.welcome-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.welcome-content h2 {
+    color: rgb(3, 118, 178);
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%; /* CLAVE: Ocupa todo el ancho */
+}
+
+.welcome-content .welcome-text {
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%; /* CLAVE: Ocupa todo el ancho */
+}
+
+.item {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 
-.welcome-images{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-top: 10px;
-}
-
-.welcome-images img{
-     width: 200px !important;
-    height: 200px !important;
+.item img{
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
     display: block;
 }
 
+.item p {
+    margin-top: 10px;
+    text-align: center;
+}
 
+
+
+/*OUR PROJECTS */
+
+.ourprojects{
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-images {
+    display: flex; /* CLAVE: Activa flexbox */
+    justify-content: center; /* Centra las imágenes */
+    gap: 2rem; /* Espacio entre imágenes */
+    flex-wrap: wrap; /* Permite ajuste en móviles */
+    width: 100%;
+}
+
+.projects-images img {
+    width: 300px; /* Fuerza el ancho */
+    height: 200px; /* Fuerza la altura */
+    object-fit: cover;
+    display: block;
+}
+
+/* SOMOS LOS EXPERTOS 🗣️*/
+
+.experts {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.experts-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expert-profile img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.expert-profile p{
+    text-align: center;
+}
 
 h2 {
     color: rgb(3, 118, 178);
