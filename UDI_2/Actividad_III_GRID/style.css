@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: grid;
+    justify-content: end; /* Alinear a la derecha */
+    padding: 20px 40px;
+}
+
+nav ul {
+    display: grid;
+    grid-auto-flow: column; /* Los elementos en fila automáticamente */
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(16, 14, 143);
+    font-size: 14px;
+}
+
+.hero {
+    display: grid;
+    justify-content: flex-start;
+    padding: 40px;
+}
+
+.hero a{
+    margin-top: 20px;
+    color: rgb(163, 126, 198);
+    background-color: aliceblue;
+    border-radius: 25px;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas iguales */
+    gap: 15px; /* Espacio entre las imágenes */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.proyecto-grande {
+    grid-column: 1 / 2; /* Ocupa la primera columna */
+    grid-row: 1 / 3; /* Ocupa las 2 filas (toda la altura) */
+}
+
+.proyecto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que las imágenes cubran todo el espacio */
+    border-radius: 10px; /* Opcional: esquinas redondeadas */
+}
