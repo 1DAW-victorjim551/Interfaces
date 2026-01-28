@@ -1,0 +1,37 @@
+// CENTRADO DE ELEMENTOS
+@mixin center {
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+
+// 2️⃣ Tipografía flexible
+
+// Usos: _typography.scss y cualquier componente que tenga texto.
+
+// Pista: tamaño (font-size), peso (font-weight) y line-height.
+
+// Extra: parámetro opcional para color usando tu función get-color().
+
+// 3️⃣ Botones y estados
+
+// Usos: _buttons.scss.
+
+// Pista: padding, borde redondeado, color de fondo y color de texto.
+
+// Extra: parámetro para tipo de botón (primary, secondary) usando tu función get-color().
+
+// 4️⃣ Responsividad / media queries
+
+// Usos: _grid.scss, _cards.scss, _forms.scss.
+
+// Pista: recibe un parámetro como mobile, tablet, desktop y usa @content para envolver el CSS que quieras que cambie.
+
+// 5️⃣ Sombra y bordes
+
+// Usos: _cards.scss, _buttons.scss.
+
+// Pista: box-shadow para sombras, border-radius para bordes redondeados.
+
+// Extra: parámetros opcionales para intensidad de sombra o tamaño de borde.

@@ -1,0 +1,38 @@
+// DECLARACION DE VARIABLES
+@use "variables" as *;
+
+// ESTADOS
+$states: (
+  hover: 0.85,
+  disabled: 0.5,
+  focus: 1
+);
+
+// COLORES
+$colors: (
+  primary: #d97706,    
+  secondary: #a16207,  
+  success: #15803d,    
+  danger: #b91c1c,     
+  warning: #fbbf24,    
+  info: #0f766e,       
+  light: #fafaf9,      
+  dark: #292524
+);
+
+// BREAKPOINTS
+$breakpoints : (
+sm : $breakpoint-sm,
+md : $breakpoint-md,
+lg : $breakpoint-lg,
+xl : $breakpoint-xl
+);
+
+// SPACING SCALE
+$spacings: (
+  xs: $spacing-base * 0.25,
+  sm: $spacing-base * 0.5,
+  md: $spacing-base,
+  lg: $spacing-base * 1.5,
+  xl: $spacing-base * 3
+);

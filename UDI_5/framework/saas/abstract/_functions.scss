@@ -1,0 +1,30 @@
+// LLAMADO A VARIABLES Y MAPS
+@use "variables" as *;
+@use "maps" as *;
+
+//PX --> REM
+@function px-to-rem($px) {
+  @return ($px / $font-size-base) * 1rem;
+}
+
+//ESCALADO PROGRESIVO DE LA TIPOGRAFÍA MEDIANTE TÉCNICAS COMO APPLE HUMAN INTERFACE
+@function type-scale($step) {
+  @return px-to-rem(
+    $font-size-base * pow($font-scale-ratio, $step)
+  );
+}
+
+//FUNCION DE ESPACIADO DINAMICA
+
+@function space($size) {
+  @return map-get($spacings, $size);
+}
+
+// FUNCION PARA SACAR EL COLOR
+
+@function get-color($color){
+    @return map-get($colors, $color);
+}
+
+
+
