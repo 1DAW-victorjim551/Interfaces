@@ -1,3 +1,10 @@
+// LLAMADO A VARIABLES, MAPS Y FUNCIONES
+
+@use "variables" as *;
+@use "maps" as *;
+@use "functions" as *;
+
+
 // CENTRADO DE ELEMENTOS
 @mixin center {
     display : flex;
@@ -5,33 +12,56 @@
     align-items : center;
 }
 
+// MEDIA QUERIES
+@mixin respond($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
 
-// 2️⃣ Tipografía flexible
+// ESTADOS (HOVER, FOCUS, DISABLED)
+@mixin state($state) {
+  @if $state == hover {
+    &:hover {
+      filter: brightness(map-get($states, hover));
+    }
+  }
 
-// Usos: _typography.scss y cualquier componente que tenga texto.
+  @if $state == focus {
+    &:focus {
+      outline: none;
+      filter: brightness(map-get($states, focus));
+    }
+  }
 
-// Pista: tamaño (font-size), peso (font-weight) y line-height.
+  @if $state == disabled {
+  &:disabled {
+    opacity: map-get($states, disabled);
+    pointer-events: none;
+  }
+}
+}
 
-// Extra: parámetro opcional para color usando tu función get-color().
+// CONFIGURACIÓN DE LOS BOTONES
+@mixin button($color-name) {
+  background-color: color($color-name);
+  color: color(dark);
 
-// 3️⃣ Botones y estados
+  border: none;
+  border-radius: $radius-md;
+  padding: space(sm) space(md);
+  cursor: pointer;
+  text-decoration: none;
 
-// Usos: _buttons.scss.
+  font-family: $font-stack;
+  font-size: type-scale(0);
+  font-weight: 500;
 
-// Pista: padding, borde redondeado, color de fondo y color de texto.
+  transition: filter 0.2s ease, opacity 0.2s ease;
 
-// Extra: parámetro para tipo de botón (primary, secondary) usando tu función get-color().
-
-// 4️⃣ Responsividad / media queries
-
-// Usos: _grid.scss, _cards.scss, _forms.scss.
-
-// Pista: recibe un parámetro como mobile, tablet, desktop y usa @content para envolver el CSS que quieras que cambie.
-
-// 5️⃣ Sombra y bordes
-
-// Usos: _cards.scss, _buttons.scss.
-
-// Pista: box-shadow para sombras, border-radius para bordes redondeados.
-
-// Extra: parámetros opcionales para intensidad de sombra o tamaño de borde.
+  @include state(hover);
+  @include state(focus);
+  @include state(disabled);
+}

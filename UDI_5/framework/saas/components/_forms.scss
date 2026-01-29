@@ -1,0 +1,40 @@
+@use 'abstract/mixins' as *;
+// FORMS
+
+.form-layout {
+    @include center;
+    flex-direction: column;
+    gap: space(xs);
+    margin-bottom: space(md);
+}
+
+label {
+  font-size: type-scale(-1);
+  color: color(dark);
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  padding: space(sm);
+  border-radius: $radius-sm;
+  border: 1px solid lighten(color(dark), 60%);
+  font-family: $font-family-base;
+  font-size: type-scale(0);
+  background-color: color(light);
+  color: color(dark);
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    border-color: color(primary);
+    box-shadow: 0 0 0 3px rgba(162, 196, 242, 0.4);
+  }
+
+  &:disabled {
+    background-color: lighten(color(light), 2%);
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

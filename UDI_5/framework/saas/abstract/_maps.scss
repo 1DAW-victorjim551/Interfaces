@@ -10,15 +10,17 @@ $states: (
 
 // COLORES
 $colors: (
-  primary: #d97706,    
-  secondary: #a16207,  
-  success: #15803d,    
-  danger: #b91c1c,     
-  warning: #fbbf24,    
-  info: #0f766e,       
-  light: #fafaf9,      
-  dark: #292524
+  primary:   #a2c4f2,
+  secondary: #f2b5d4,
+  success:   #b8d8c2,
+  warning:   #f4c7a1,
+  danger:    #f2a7a7,
+  info:      #b7dce5,
+  light:     #fdfcfa,
+  dark:      #2f2f2f
 );
+
+
 
 // BREAKPOINTS
 $breakpoints : (
