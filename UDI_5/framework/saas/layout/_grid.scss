@@ -1,0 +1,51 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+@use "sass:color";
+
+// GRID SYSTEM
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: space(md);
+}
+
+.grid {
+  display: grid;
+  gap: space(md);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+// RESPONSIVE
+
+@include respond(md) {
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include respond(lg) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

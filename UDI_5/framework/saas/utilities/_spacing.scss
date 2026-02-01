@@ -1,0 +1,53 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+@use "sass:color";
+
+// SPACING UTILITIES
+
+@each $size, $value in $spacings {
+
+  // MARGIN
+  .m-#{$size} {
+    margin: $value;
+  }
+
+  .mt-#{$size} {
+    margin-top: $value;
+  }
+
+  .mb-#{$size} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$size} {
+    margin-left: $value;
+  }
+
+  .mr-#{$size} {
+    margin-right: $value;
+  }
+
+  // PADDING
+  .p-#{$size} {
+    padding: $value;
+  }
+
+  .pt-#{$size} {
+    padding-top: $value;
+  }
+
+  .pb-#{$size} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$size} {
+    padding-left: $value;
+  }
+
+  .pr-#{$size} {
+    padding-right: $value;
+  }
+
+}

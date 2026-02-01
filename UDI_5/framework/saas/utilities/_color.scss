@@ -1,0 +1,21 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+@use "sass:color";
+
+// COLOR UTILITIES
+
+@each $name, $value in $colors {
+
+  // TEXT COLOR
+  .text-#{$name} {
+    color: $value;
+  }
+
+  // BACKGROUND COLOR
+  .bg-#{$name} {
+    background-color: $value;
+  }
+
+}

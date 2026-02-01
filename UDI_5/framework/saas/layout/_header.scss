@@ -1,0 +1,38 @@
+@use '../abstract/variables' as *;
+@use '../abstract/functions' as *;
+@use '../abstract/maps' as *;
+@use "sass:map";
+@use "sass:color";
+
+// HEADER
+
+.header {
+  width: 100%;
+  padding: space(md);
+  background-color: map.get($colors, primary);
+  color: map.get($colors, dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  font-size: type-scale(1);
+  font-weight: 600;
+}
+
+.header__nav {
+  display: flex;
+  gap: space(md);
+}
+
+.header__link {
+  font-size: type-scale(0);
+  color: map.get($colors, dark);
+  text-decoration: none;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}

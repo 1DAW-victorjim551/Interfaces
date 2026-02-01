@@ -3,6 +3,7 @@
 @use "variables" as *;
 @use "maps" as *;
 @use "functions" as *;
+@use "sass:map";
 
 
 // CENTRADO DE ELEMENTOS
@@ -14,8 +15,8 @@
 
 // MEDIA QUERIES
 @mixin respond($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   }
@@ -25,20 +26,20 @@
 @mixin state($state) {
   @if $state == hover {
     &:hover {
-      filter: brightness(map-get($states, hover));
+      filter: brightness(map.get($states, hover));
     }
   }
 
   @if $state == focus {
     &:focus {
       outline: none;
-      filter: brightness(map-get($states, focus));
+      filter: brightness(map.get($states, focus));
     }
   }
 
   @if $state == disabled {
   &:disabled {
-    opacity: map-get($states, disabled);
+    opacity: map.get($states, disabled);
     pointer-events: none;
   }
 }

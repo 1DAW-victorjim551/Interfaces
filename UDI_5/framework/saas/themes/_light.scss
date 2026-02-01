@@ -1,0 +1,18 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+@use "sass:color";
+
+// THEME LIGHT
+
+.theme-light {
+  --color-bg: #{map.get($colors, light)};
+  --color-text: #{map.get($colors, dark)};
+  --color-primary: #{map.get($colors, primary)};
+  --color-secondary: #{map.get($colors, light)};
+  --color-border: #{color.adjust(map.get($colors, dark), $lightness: 60%)};
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}

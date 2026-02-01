@@ -1,0 +1,53 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+// BUTTONS
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: space(sm) space(md);
+  border-radius: $radius-md;
+  border: none;
+
+  font-family: $font-family-base;
+  font-size: type-scale(0);
+  font-weight: 500;
+
+  background-color: map.get($colors, primary);
+  color: map.get($colors, dark);
+
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: filter 0.2s ease, opacity 0.2s ease;
+
+  @include state(hover);
+  @include state(focus);
+  @include state(disabled);
+}
+
+// VARIANTES
+
+.button--primary {
+  background-color: map.get($colors, primary);
+}
+
+.button--secondary {
+  background-color: map.get($colors, secondary);
+}
+
+.button--success {
+  background-color: map.get($colors, success);
+}
+
+.button--warning {
+  background-color: map.get($colors, warning);
+}
+
+.button--danger {
+  background-color: map.get($colors, danger);
+}

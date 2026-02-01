@@ -1,0 +1,38 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+@use "sass:color";
+
+// FOOTER
+
+.footer {
+  width: 100%;
+  margin-top: space(lg);
+  padding: space(md);
+  background-color: map.get($colors, secondary);
+  color: map.get($colors, dark);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: space(sm);
+}
+
+.footer__text {
+  font-size: type-scale(-1);
+}
+
+.footer__links {
+  display: flex;
+  gap: space(md);
+}
+
+.footer__link {
+  font-size: type-scale(-1);
+  color: map.get($colors, dark);
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}

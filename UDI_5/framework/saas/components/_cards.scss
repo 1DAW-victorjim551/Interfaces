@@ -1,31 +1,36 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+@use "sass:color";
+
 .cards-layout{
-    display : flex;
-    flex-direction: column;
+    @include center;
     gap: space(md);
-    background-color: color(light);
-    border: 1px solid lighten(color(dark), 70%);
+    background-color: map.get($colors, light);
+    border: 1px solid color.adjust(map.get($colors, dark), $lightness: 70%);
     border-radius: $radius-md;
     padding: space(md);
-    box-shadow: 0 2px 4px rgba(color(dark), 0.05);
+    box-shadow: 0 2px 4px rgba(map.get($colors, dark), 0.05);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 
     &__title {
     font-size: type-scale(1);
     font-weight: 600;
     margin-bottom: space(xs);
-    color: color(dark);
+    color: map.get($colors, dark);
   }
 
   &__subtitle {
     font-size: type-scale(0);
     font-weight: 400;
     margin-bottom: space(sm);
-    color: lighten(color(dark), 20%);
+    color: color.adjust(map.get($colors, dark), $lightness: 60%);
   }
 
   &__content {
     font-size: type-scale(0);
-    color: color(dark);
+    color: map.get($colors, dark);
   }
 
 }

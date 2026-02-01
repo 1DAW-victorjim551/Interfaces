@@ -1,0 +1,20 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+@use "sass:color";
+
+// THEME DARK
+
+.theme-dark {
+  --color-bg: #1e1e1e;
+  --color-text: #f5f5f5;
+
+  --color-primary: #8fb8f5;   // azul pastel adaptado
+  --color-secondary: #f0a6ca; // rosa pastel adaptado
+
+  --color-border: #3a3a3a;
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}

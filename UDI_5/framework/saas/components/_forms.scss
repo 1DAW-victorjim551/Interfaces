@@ -1,8 +1,12 @@
-@use 'abstract/mixins' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use "sass:map";
+@use "sass:color";
 // FORMS
 
 .form-layout {
-    @include center;
+    display: flex;
     flex-direction: column;
     gap: space(xs);
     margin-bottom: space(md);
@@ -10,7 +14,7 @@
 
 label {
   font-size: type-scale(-1);
-  color: color(dark);
+  color: map.get($colors, dark);
   font-weight: 500;
 }
 
@@ -19,21 +23,21 @@ select,
 textarea {
   padding: space(sm);
   border-radius: $radius-sm;
-  border: 1px solid lighten(color(dark), 60%);
+  border: 1px solid color.adjust(map.get($colors, dark), $lightness: 60%);
   font-family: $font-family-base;
   font-size: type-scale(0);
-  background-color: color(light);
-  color: color(dark);
+  background-color: map.get($colors, light);
+  color: map.get($colors, dark);
 
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
   &:focus {
-    border-color: color(primary);
+    border-color: map.get($colors, primary);
     box-shadow: 0 0 0 3px rgba(162, 196, 242, 0.4);
   }
 
   &:disabled {
-    background-color: lighten(color(light), 2%);
+    background-color: color.adjust(map.get($colors, light), $lightness: 2%);
     opacity: 0.6;
     cursor: not-allowed;
   }
