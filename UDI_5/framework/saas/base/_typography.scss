@@ -14,7 +14,7 @@ body {
   background-color: map.get($colors, light);
 }
 
-// HEADINGS
+// TÍTULOS
 
 h1,
 h2,
@@ -71,7 +71,7 @@ em {
   font-style: italic;
 }
 
-// LINKS
+// ENLACES
 
 a {
   color: map.get($colors, primary);

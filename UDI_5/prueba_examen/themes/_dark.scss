@@ -1,0 +1,10 @@
+@use "sass:color";
+@use "../utilities/color.scss" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/maps" as *;
+.theme-dark{
+    --color-bg : #{get-color(dark)};
+    --color-text : #{get-color(light)};
+    --color-primary : #{get-color(primary)};
+    --color-border : #{get-color(light)};
+}

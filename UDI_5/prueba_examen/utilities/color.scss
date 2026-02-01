@@ -1,0 +1,15 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/maps' as *;
+@use '../abstract/variables' as *;
+@use '../abstract/functions' as *;
+@use "sass:map";
+
+@each $name, $value in $colors{
+    .text-#{$name} {
+        color: $value;
+    }
+
+    .bg-#{$name}{
+        background-color: $value;
+    }
+}

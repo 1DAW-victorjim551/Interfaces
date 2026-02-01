@@ -1,0 +1,17 @@
+@use "../abstract/functions" as *;
+@use "../abstract/maps" as *;
+@use "../abstract/mixins" as *;
+@use "../abstract/variables" as *;
+
+.button {
+    padding : space(sm) space(md);
+    color : get-color(primary);
+    @include state(hover);
+
+
+}
+
+
+.button--danger{
+    color: get-color(danger);
+}

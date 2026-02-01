@@ -1,0 +1,55 @@
+.text-primary {
+  color: rgba(124, 229, 236, 0.267);
+}
+
+.bg-primary {
+  background-color: rgba(124, 229, 236, 0.267);
+}
+
+.text-secondary {
+  color: rgba(237, 162, 237, 0.267);
+}
+
+.bg-secondary {
+  background-color: rgba(237, 162, 237, 0.267);
+}
+
+.text-success {
+  color: rgba(122, 233, 122, 0.267);
+}
+
+.bg-success {
+  background-color: rgba(122, 233, 122, 0.267);
+}
+
+.text-warning {
+  color: rgba(229, 232, 131, 0.267);
+}
+
+.bg-warning {
+  background-color: rgba(229, 232, 131, 0.267);
+}
+
+.text-danger {
+  color: rgba(236, 101, 67, 0.267);
+}
+
+.bg-danger {
+  background-color: rgba(236, 101, 67, 0.267);
+}
+
+.text-light {
+  color: rgba(236, 245, 209, 0.267);
+}
+
+.bg-light {
+  background-color: rgba(236, 245, 209, 0.267);
+}
+
+.text-dark {
+  color: rgba(66, 69, 66, 0.267);
+}
+
+.bg-dark {
+  background-color: rgba(66, 69, 66, 0.267);
+}/*# sourceMappingURL=color.css.map */

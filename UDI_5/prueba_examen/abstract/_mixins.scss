@@ -1,0 +1,31 @@
+@use "../abstract/functions" as *;
+@use "../abstract/maps" as *;
+@use "../abstract/variables" as *;
+@use "sass:map";
+// MEDIA QUERIES
+    @mixin respond($breakpoint) {
+    @if map.has-key($breakpoints, $breakpoint) {
+        @media (min-width: map.get($breakpoints, $breakpoint)) {
+        @content;
+        }
+    }
+    }
+
+@mixin state($state){
+    @if $state == hover {
+        &:hover {
+          filter : brightness(map.get($states, hover));
+        }
+    }
+
+    @if $state == focus {
+        &:focus{
+            filter: brightness(map.get($states, focus));
+        }
+    }
+
+    @if $state == disabled {
+        opacity: map.get($states, disabled);
+        pointer-events: none;
+    }
+}

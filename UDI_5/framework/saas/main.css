@@ -48,7 +48,7 @@ ol {
 
 body {
   font-family: Helvetica, sans-serif;
-  font-size: 1;
+  font-size: 1rem;
   line-height: 1.6;
   color: #2f2f2f;
   background-color: #fdfcfa;
@@ -68,27 +68,27 @@ h6 {
 }
 
 h1 {
-  font-size: 2.44140625;
+  font-size: 2.44140625rem;
 }
 
 h2 {
-  font-size: 1.953125;
+  font-size: 1.953125rem;
 }
 
 h3 {
-  font-size: 1.5625;
+  font-size: 1.5625rem;
 }
 
 h4 {
-  font-size: 1.25;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 1;
+  font-size: 1rem;
 }
 
 h6 {
-  font-size: 0.8;
+  font-size: 0.8rem;
 }
 
 p {
@@ -96,7 +96,7 @@ p {
 }
 
 small {
-  font-size: 0.8;
+  font-size: 0.8rem;
 }
 
 strong {
@@ -119,11 +119,11 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: space(sm) space(md);
+  padding: 0.5rem 1rem;
   border-radius: 8px;
   border: none;
   font-family: Helvetica, sans-serif;
-  font-size: type-scale(0);
+  font-size: 1rem;
   font-weight: 500;
   background-color: #a2c4f2;
   color: #2f2f2f;
@@ -166,12 +166,12 @@ a:hover {
 .form-layout {
   display: flex;
   flex-direction: column;
-  gap: space(xs);
-  margin-bottom: space(md);
+  gap: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 label {
-  font-size: type-scale(-1);
+  font-size: 0.8rem;
   color: #2f2f2f;
   font-weight: 500;
 }
@@ -179,11 +179,11 @@ label {
 input,
 select,
 textarea {
-  padding: space(sm);
+  padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #c8c8c8;
   font-family: Helvetica, sans-serif;
-  font-size: type-scale(0);
+  font-size: 1rem;
   background-color: #fdfcfa;
   color: #2f2f2f;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -206,28 +206,28 @@ textarea:disabled {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: space(md);
+  gap: 1rem;
   background-color: #fdfcfa;
   border: 1px solid rgb(225.5, 225.5, 225.5);
   border-radius: 8px;
-  padding: space(md);
+  padding: 1rem;
   box-shadow: 0 2px 4px rgba(47, 47, 47, 0.05);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .cards-layout__title {
-  font-size: type-scale(1);
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: space(xs);
+  margin-bottom: 0.25rem;
   color: #2f2f2f;
 }
 .cards-layout__subtitle {
-  font-size: type-scale(0);
+  font-size: 1rem;
   font-weight: 400;
-  margin-bottom: space(sm);
+  margin-bottom: 0.5rem;
   color: #c8c8c8;
 }
 .cards-layout__content {
-  font-size: type-scale(0);
+  font-size: 1rem;
   color: #2f2f2f;
 }
 
@@ -242,7 +242,7 @@ textarea:disabled {
 }
 
 .header__title {
-  font-size: 1.25;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -252,7 +252,7 @@ textarea:disabled {
 }
 
 .header__link {
-  font-size: 1;
+  font-size: 1rem;
   color: #2f2f2f;
   text-decoration: none;
 }
@@ -264,12 +264,12 @@ textarea:disabled {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
-  padding-inline: space(md);
+  padding-inline: 1rem;
 }
 
 .grid {
   display: grid;
-  gap: space(md);
+  gap: 1rem;
 }
 
 .grid--2 {
@@ -301,27 +301,27 @@ textarea:disabled {
 }
 .footer {
   width: 100%;
-  margin-top: space(lg);
-  padding: space(md);
+  margin-top: 1.5rem;
+  padding: 1rem;
   background-color: #f2b5d4;
   color: #2f2f2f;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: space(sm);
+  gap: 0.5rem;
 }
 
 .footer__text {
-  font-size: type-scale(-1);
+  font-size: 0.8rem;
 }
 
 .footer__links {
   display: flex;
-  gap: space(md);
+  gap: 1rem;
 }
 
 .footer__link {
-  font-size: type-scale(-1);
+  font-size: 0.8rem;
   color: #2f2f2f;
 }
 .footer__link:hover {

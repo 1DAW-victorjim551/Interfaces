@@ -1,7 +1,8 @@
-// LLAMADO A VARIABLES Y MAPS
-@use "variables" as *;
-@use "maps" as *;
+@use "../abstract/maps" as *;
+@use "../abstract/variables" as *;
+
 @use "sass:math";
+@use "sass:color";
 @use "sass:map";
 
 //PX --> REM
@@ -16,17 +17,10 @@
   );
 }
 
-//FUNCION DE ESPACIADO DINAMICA
-
-@function space($size) {
-  @return map.get($spacings, $size);
-}
-
-// FUNCION PARA SACAR EL COLOR
+@function space($size){
+    @return map.get($spacing, $size)
+};
 
 @function get-color($color){
-    @return map.get($colors, $color);
+    @return map.get($colors, $color)
 }
-
-
-

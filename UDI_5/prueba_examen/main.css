@@ -1,0 +1,92 @@
+.button {
+  padding: 8px 16px;
+  color: rgba(124, 229, 236, 0.267);
+}
+.button:hover {
+  filter: brightness(0.85);
+}
+
+.button--danger {
+  color: rgba(236, 101, 67, 0.267);
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .grid.grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.text-primary {
+  color: rgba(124, 229, 236, 0.267);
+}
+
+.bg-primary {
+  background-color: rgba(124, 229, 236, 0.267);
+}
+
+.text-secondary {
+  color: rgba(237, 162, 237, 0.267);
+}
+
+.bg-secondary {
+  background-color: rgba(237, 162, 237, 0.267);
+}
+
+.text-success {
+  color: rgba(122, 233, 122, 0.267);
+}
+
+.bg-success {
+  background-color: rgba(122, 233, 122, 0.267);
+}
+
+.text-warning {
+  color: rgba(229, 232, 131, 0.267);
+}
+
+.bg-warning {
+  background-color: rgba(229, 232, 131, 0.267);
+}
+
+.text-danger {
+  color: rgba(236, 101, 67, 0.267);
+}
+
+.bg-danger {
+  background-color: rgba(236, 101, 67, 0.267);
+}
+
+.text-light {
+  color: rgba(236, 245, 209, 0.267);
+}
+
+.bg-light {
+  background-color: rgba(236, 245, 209, 0.267);
+}
+
+.text-dark {
+  color: rgba(66, 69, 66, 0.267);
+}
+
+.bg-dark {
+  background-color: rgba(66, 69, 66, 0.267);
+}
+
+.theme-dark {
+  --color-bg: rgba(66, 69, 66, 0.267);
+  --color-text: rgba(236, 245, 209, 0.267);
+  --color-primary: rgba(124, 229, 236, 0.267);
+  --color-border: rgba(236, 245, 209, 0.267);
+}
+
+.theme-light {
+  --color-bg: rgba(236, 245, 209, 0.267);
+  --color-text: rgba(66, 69, 66, 0.267);
+  --color-primary: rgba(124, 229, 236, 0.267);
+  --color-border: rgba(66, 69, 66, 0.267);
+}/*# sourceMappingURL=main.css.map */

@@ -3,11 +3,13 @@
 @use '../abstract/variables' as *;
 @use "sass:map";
 @use "sass:color";
+@use '../abstract/functions' as *;
+
 
 .cards-layout{
     @include center;
     gap: space(md);
-    background-color: map.get($colors, light);
+    background-color: get-color(light);
     border: 1px solid color.adjust(map.get($colors, dark), $lightness: 70%);
     border-radius: $radius-md;
     padding: space(md);
@@ -18,7 +20,7 @@
     font-size: type-scale(1);
     font-weight: 600;
     margin-bottom: space(xs);
-    color: map.get($colors, dark);
+    color: get-color(dark);
   }
 
   &__subtitle {
@@ -30,7 +32,7 @@
 
   &__content {
     font-size: type-scale(0);
-    color: map.get($colors, dark);
+    color: get-color(dark);
   }
 
 }

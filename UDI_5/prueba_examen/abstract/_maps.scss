@@ -1,0 +1,40 @@
+@use "../abstract/variables" as *;
+
+$colors : (
+primary : rgba(124, 229, 236, 0.267),
+secondary : rgba(237, 162, 237, 0.267),
+success : rgba(122, 233, 122, 0.267),
+warning : rgba(229, 232, 131, 0.267),
+danger : rgba(236, 101, 67, 0.267),
+light : rgba(236, 245, 209, 0.267),
+dark: rgba(66, 69, 66, 0.267)
+);
+
+$radius: (
+  sm: 4px,
+  md: 8px,
+  lg: 16px,
+  pill: 9999px
+);
+
+$spacing: (
+  xs: 4px,
+  sm: 8px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px
+);
+
+$states: (
+  hover: 0.85,
+  disabled: 0.5,
+  focus: 1
+);
+
+$breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);

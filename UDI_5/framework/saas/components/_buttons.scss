@@ -2,6 +2,7 @@
 @use '../abstract/maps' as *;
 @use '../abstract/variables' as *;
 @use "sass:map";
+@use '../abstract/functions' as *;
 // BUTTONS
 
 .button {
@@ -17,8 +18,8 @@
   font-size: type-scale(0);
   font-weight: 500;
 
-  background-color: map.get($colors, primary);
-  color: map.get($colors, dark);
+  background-color: get-color(primary);
+  color: get-color(dark);
 
   cursor: pointer;
   text-decoration: none;
@@ -33,21 +34,21 @@
 // VARIANTES
 
 .button--primary {
-  background-color: map.get($colors, primary);
+  background-color: get-color(primary); 
 }
 
 .button--secondary {
-  background-color: map.get($colors, secondary);
+  background-color: get-color(secondary);
 }
 
 .button--success {
-  background-color: map.get($colors, success);
+  background-color: get-color(success);
 }
 
 .button--warning {
-  background-color: map.get($colors, warning);
+  background-color: get-color(warning);
 }
 
 .button--danger {
-  background-color: map.get($colors, danger);
+  background-color: get-color(danger);
 }
