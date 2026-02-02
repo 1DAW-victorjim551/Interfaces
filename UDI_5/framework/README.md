@@ -4,7 +4,7 @@
 Su estética se basa en **colores pastel cálidos**, alejándose de estilos agresivos o chillones como los de frameworks tradicionales.
 
 Este proyecto se ha desarrollado con fines académicos para el módulo de **Diseño de Interfaces Web**, aplicando buenas prácticas de arquitectura Sass moderna.
-
+![image](https://gx-mod.com/wp-content/uploads/2017/05/Luma3DS.png)
 ---
 
 ## 🎯 Objetivos
